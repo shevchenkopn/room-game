@@ -57,8 +57,8 @@ class Enemy:
     def talk(self) -> None:
         print(f'[{self.__name} says]: {self.__conversation}')
 
-    def fight(self, fight_with: str) -> bool:
-        if fight_with == self.__weakness:
+    def fight(self, fight_against: str) -> bool:
+        if fight_against == self.__weakness:
             global defeated
             defeated += 1
             return True
